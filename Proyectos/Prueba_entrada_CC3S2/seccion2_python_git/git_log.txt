@@ -1,0 +1,59 @@
+* commit 30f4543d26cf3a06860d4efe510e5fb7bdfcbae3
+| Author: fausto-e <fausto4412711@gmail.com>
+| Date:   Sun Sep 7 20:44:21 2025 -0500
+| 
+|     Add feature/rebase to app.py
+| 
+* commit b092ea281b8c99d2851410ab96a282a16f656d04
+| Author: fausto-e <fausto4412711@gmail.com>
+| Date:   Sun Sep 7 20:46:49 2025 -0500
+| 
+|     Add test_app.py
+| 
+* commit f60c690ae15659aaca8375a1085e25899e842d82
+| Author: fausto-e <fausto4412711@gmail.com>
+| Date:   Sun Sep 7 20:36:15 2025 -0500
+| 
+|     Cherry pick Fix app.py
+| 
+* commit 3c7e33a0d6ab19d163d4847b672153d8bd5d7844
+| Author: fausto-e <fausto4412711@gmail.com>
+| Date:   Sun Sep 7 20:38:00 2025 -0500
+| 
+|     Add app.py
+|   
+| * commit c43c3e08afab6d97fd594c6a0dff18e74020bb11
+|/  Author: fausto-e <fausto4412711@gmail.com>
+|   Date:   Sun Sep 7 20:36:15 2025 -0500
+|   
+|       Fix app.py
+| 
+* commit 26551f5931d6339e24cf1b81fb557cea9319ea65
+| Author: fausto-e <fausto4412711@gmail.com>
+| Date:   Sun Sep 7 20:30:47 2025 -0500
+| 
+|     Add coverage.txt
+| 
+* commit 43176b9913adcf4ec0140aafd1e1667f1f221b85
+| Author: fausto-e <fausto4412711@gmail.com>
+| Date:   Sun Sep 7 19:37:31 2025 -0500
+| 
+|     Debug syscheck.sh
+| 
+* commit 7c26176fe8cd8c0772eb7b29f328b3f62e2484b0
+| Author: fausto-e <fausto4412711@gmail.com>
+| Date:   Sun Sep 7 19:34:12 2025 -0500
+| 
+|     Add Makefile
+| 
+* commit 08f2cba3e22ac9f9a06900f80bc40ea9e10c01f2
+| Author: fausto-e <fausto4412711@gmail.com>
+| Date:   Sun Sep 7 18:48:26 2025 -0500
+| 
+|     Add syscheck.sh
+| 
+* commit 3794780a6207db964256196e92fd735675445c9e
+  Author: fausto-e <fausto4412711@gmail.com>
+  Date:   Mon Sep 1 02:07:46 2025 -0500
+  
+      Estructura de actividad 1
