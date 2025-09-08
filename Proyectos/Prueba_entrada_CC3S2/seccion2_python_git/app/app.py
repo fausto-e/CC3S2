@@ -2,6 +2,7 @@ import sys
 
 
 # Fix innecesario en forma de commentario
+# feature/rebase here
 
 def summarize(nums):
     if not isinstance(nums, list):
