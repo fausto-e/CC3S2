@@ -1,0 +1,29 @@
+### Uso de curl y dig
+
+curl descarga el contenido HTML de example.com y lo guarda en example.html.  
+dig consulta los registros A de google.com y muestra dirección IP y TTL (tiempo que la respuesta puede permanecer en caché, en este caso 17 segundos). 
+
+
+### HTTP, Puertos 80 vs 443 y TLS - Guía Completa
+
+#### ¿Qué es HTTP?
+
+**HTTP (HyperText Transfer Protocol)** es el protocolo fundamental que gobierna la comunicación entre navegadores web y servidores. Funciona como un sistema de solicitud-respuesta donde el cliente (navegador) pide recursos como páginas web, imágenes o datos, y el servidor responde enviando la información solicitada.
+
+#### Puerto 80 - HTTP Tradicional
+El **puerto 80** es el puerto estándar para HTTP tradicional. Toda la información viaja en texto plano, completamente visible para cualquiera que intercepte la comunicación.
+
+#### Puerto 443 - HTTPS Seguro
+El **puerto 443** es el puerto designado para HTTPS (HTTP Secure), donde la "S" indica que la conexión está protegida mediante cifrado. Aquí es donde entra en juego el protocolo TLS.
+
+#### ¿Por qué TLS es Crucial?
+
+**TLS (Transport Layer Security)** es un protocolo de seguridad que cifra la comunicación entre el navegador y el servidor web.
+
+#### Protección que Ofrece TLS
+
+TLS protege contra tres amenazas principales:
+
+- **Espionaje**: Evita que personas no autorizadas lean datos personales, contraseñas o información bancaria
+- **Manipulación**: Garantiza que los datos no sean alterados durante el tránsito  
+- **Suplantación**: Verifica que realmente se está conectado al sitio web legítimo

@@ -1,0 +1,5 @@
+Un flujo de despliegue mínimo comienza con la fase de código, donde el código se almacena en un sistema de control de versiones como Git, lo que permite llevar un historial de cambios y trabajar en equipo sin conflictos. Una vez que se tiene una versión lista, se avanza a la fase de pruebas utilizando herramientas como pytest para Python o Jest para JavaScript, que ejecutan tests automatizados para verificar que el sistema funciona como se espera y que nuevas modificaciones no rompen funcionalidades previas. 
+
+Si las pruebas son exitosas, se procede al despliegue usando Docker, que empaqueta el software junto con todas sus dependencias, asegurando que se ejecute igual en cualquier servidor. El contenedor puede desplegarse en plataformas como AWS ECS, Heroku o Vercel.
+
+Para automatizar este flujo, se implementan pipelines de CI/CD que conectan estos tres pasos, ejecutando automáticamente las pruebas cada vez que se actualiza el código en Git y desplegando la aplicación solo si todas las validaciones son exitosas, eliminando intervención manual y reduciendo errores humanos en el proceso de publicación.
