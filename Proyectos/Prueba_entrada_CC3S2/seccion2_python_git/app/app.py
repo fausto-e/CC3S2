@@ -1,6 +1,8 @@
 import sys
 
 
+# Fix innecesario en forma de commentario
+
 def summarize(nums):
     if not isinstance(nums, list):
         raise ValueError("nums debe ser una list.")
