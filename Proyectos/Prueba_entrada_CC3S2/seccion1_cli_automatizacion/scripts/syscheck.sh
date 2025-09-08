@@ -29,7 +29,7 @@ dig AAAA example.org +noall +answer >> "$REPORT_DIR/dns.txt"
 echo -e "\nRegistro MX para example.com:" >> "$REPORT_DIR/dns.txt"
 dig MX example.com +noall +answer >> "$REPORT_DIR/dns.txt"
 
-echo "En DNS, el TTL define cuánto tiempo las respuestas (A, AAAA, MX) pueden guardarse en caché antes de requerir nueva consulta."  >> dns.txt
+echo "En DNS, el TTL define cuánto tiempo las respuestas (A, AAAA, MX) pueden guardarse en caché antes de requerir nueva consulta."  >> $REPORT_DIR/dns.txt
 
 echo "Versión TLS observada:" > "$REPORT_DIR/tls.txt"
 curl -Iv https://example.com 2>&1 | grep "TLS" >> "$REPORT_DIR/tls.txt"
