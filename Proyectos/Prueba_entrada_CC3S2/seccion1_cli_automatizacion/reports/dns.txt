@@ -1,16 +1,16 @@
 Registro A para example.com:
-example.com.		1	IN	A	23.215.0.138
-example.com.		1	IN	A	23.192.228.80
-example.com.		1	IN	A	23.215.0.136
-example.com.		1	IN	A	23.220.75.232
-example.com.		1	IN	A	23.220.75.245
-example.com.		1	IN	A	23.192.228.84
+example.com.		43	IN	A	23.215.0.136
+example.com.		43	IN	A	23.215.0.138
+example.com.		43	IN	A	23.220.75.245
+example.com.		43	IN	A	23.192.228.80
+example.com.		43	IN	A	23.220.75.232
+example.com.		43	IN	A	23.192.228.84
 
 Registro AAAA para example.org:
-example.org.		46	IN	AAAA	2600:1406:5e00:6::17ce:bc29
-example.org.		46	IN	AAAA	2600:1408:ec00:36::1736:7f2f
-example.org.		46	IN	AAAA	2600:1408:ec00:36::1736:7f2e
-example.org.		46	IN	AAAA	2600:1406:5e00:6::17ce:bc3c
+example.org.		206	IN	AAAA	2600:1408:ec00:36::1736:7f2e
+example.org.		206	IN	AAAA	2600:1406:5e00:6::17ce:bc3c
+example.org.		206	IN	AAAA	2600:1406:5e00:6::17ce:bc29
+example.org.		206	IN	AAAA	2600:1408:ec00:36::1736:7f2f
 
 Registro MX para example.com:
 example.com.		0	IN	MX	0 errdomain.
