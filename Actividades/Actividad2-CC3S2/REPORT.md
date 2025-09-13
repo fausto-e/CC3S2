@@ -98,8 +98,52 @@ La aplicación no escribe en archivos locales, sino que delega al entorno (Docke
 ![ejecucion make hosts-setup](images/make_host.png)
 
 #### 2.2 Comprueba resolución
-![resolucion de miapp.local](images/dig.png)
+![resolucion de miapp.local](images/resolucion.png)
 
 
 #### 2.3 TTL/caché
+```
+;example.com.                   IN      A
+
+;; ANSWER SECTION:
+example.com.            3m42s   IN      A       23.220.75.245
+example.com.            3m42s   IN      A       23.192.228.80
+example.com.            3m42s   IN      A       23.192.228.84
+example.com.            3m42s   IN      A       23.215.0.136
+example.com.            3m42s   IN      A       23.215.0.138
+example.com.            3m42s   IN      A       23.220.75.232
+
+;; Query time: 6 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Fri Sep 12 21:24:36 -05 2025
+;; MSG SIZE  rcvd: 136
+```
+
 > El TTL indica cuánto tiempo los resolutores pueden cachear esa respuesta antes de volver a preguntarle a un servidor autoritativo.
+
+**¿Qué diferencia hay entre /etc/hosts y una zona DNS autoritativa?**
+
+`/etc/hosts` es un archivo local que mapea nombres de dominio a IPs sin depender de un servidor.
+Una zona DNS autoritativa es la fuente oficial en internet de los registros de un dominio.
+`/etc/hosts` es útil en este laboratorio porque permite mapear un dominio (miapp.local) a una IP (127.0.0.1) sin tener que registrar un dominio ni configurar un servidor DNS.
+
+### 3 TLS: seguridad en tránsito con Nginx como reverse proxy
+
+- Certificado de laboratorio: genera autofirmado (usa el target make tls-cert si existe) y coloca crt/key donde lo espera Nginx (ver guía).
+
+> Proceso guardado en el Makefile con el target `tls-cert`.
+
+- Configura Nginx: usa el ejemplo provisto para terminación TLS y proxy_pass a http://127.0.0.1:8080 con cabeceras X-Forwarded-*. Luego nginx -t y reinicia el servicio. Incluye el snippet clave de tu server en el reporte.
+![nginx config](images/tls.png)
+
+- Valida el handshake:
+
+openssl s_client -connect miapp.local:443 -servername miapp.local -brief (muestra TLSv1.2/1.3, cadena, SNI).curl -k https://miapp.local/ (explica el uso de -k con certificados autofirmados).
+
+![alt text](images/image.png)
+
+> -k omite la verificación del certificado, útil para certificados autofirmados.
+
+**Puertos y logs**
+
+![](images/tls2.png)
