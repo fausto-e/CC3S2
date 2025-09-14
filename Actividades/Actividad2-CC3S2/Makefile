@@ -9,10 +9,26 @@ KEY :="$(CERT_DIR)/$(DOMAIN).key"
 NGINX_LINK := "/etc/nginx/sites-enabled/miapp.conf"
 NGINX_SITE := "/etc/nginx/sites-available/miapp.conf"
 HOST := "miapp.local"
+MESSAGE ?= "Hola, Mundo!"
+RELEASE ?= "v1.0"
+VENV ?= "venv"
+PY := $(VENV)/bin/python
+PIP := $(PY) -m pip
+
 
 .PHONY: help
 help: ## Mostrar los targets disponibles
 	@grep -E '^[a-zA-Z_-]+:.*?##' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+.PHONY: run
+run: ## Ejecutar la aplicación Flask y guardar logs en ./logs/logs.txt
+	@if [ -d logs ]; then \
+		echo "Directorio logs ya existe"; \
+	else \
+		mkdir logs; \
+	fi
+	@echo "Ejecutando la aplicación Flask en http://127.0.0.1"
+	PORT=$(APP_PORT) MESSAGE=$(MESSAGE) RELEASE=$(RELEASE) $(PY) miapp/app.py 2>&1 | tee ./logs/logs.txt
 
 .PHONY: hosts-setup
 hosts-setup: ## Añadir entradas a /etc/hosts
@@ -55,3 +71,23 @@ tls-check: ## Verificar certificados TLS
 			sudo tail -n 50 /var/log/nginx/error.log; \
 		fi \
 	fi \
+
+.PHONY: all
+all: hosts-setup tls-cert run ## Configurar hosts, TLS y ejecutar la aplicación
+
+$(VENV): ## Crear entorno virtual e instalar dependencias
+	@if [ -d $(VENV) ]; then \
+		echo "El entorno virtual ya existe ./$(VENV)"; \
+	else \
+		$(PY) -m venv $(VENV); \
+		echo "Entorno virtual creado en $(VENV)"; \
+	fi
+	@ $(PIP) install --upgrade pip && $(PIP) install Flask
+	@echo "Dependencias instaladas en el entorno virtual $(VENV)"
+
+.PHONY: tls-check
+dns-check: ## Verificar resolución DNS
+	@echo "Verificando resolución DNS para $(DOMAIN)"
+	@ping -c 1 $(DOMAIN) || echo "No se pudo hacer ping a $(DOMAIN)"
+	@nslookup $(DOMAIN) || echo "No se pudo resolver $(DOMAIN)"
+	@dig $(DOMAIN) +short || echo "No se pudo dig a $(DOMAIN)"

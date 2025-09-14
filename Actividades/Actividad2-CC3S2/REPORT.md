@@ -140,10 +140,32 @@ Una zona DNS autoritativa es la fuente oficial en internet de los registros de u
 
 openssl s_client -connect miapp.local:443 -servername miapp.local -brief (muestra TLSv1.2/1.3, cadena, SNI).curl -k https://miapp.local/ (explica el uso de -k con certificados autofirmados).
 
-![alt text](images/image.png)
+![](images/image.png)
 
 > -k omite la verificación del certificado, útil para certificados autofirmados.
 
-**Puertos y logs**
+**Puertos y logs con evidencias de ambos sockets**
 
 ![](images/tls2.png)
+
+### 12-Factor App
+2. config por entorno: variables de entorno MESSAGE, RELEASE
+![](images/env_variables.png)
+
+3. Los logs no se configuran en la app porque el entorno se debe encargar (systemd, Docker, etc.) segun las practicas de 12-Factor App.
+![](./images/logs.png)
+
+- **HTTP: explica idempotencia de métodos y su impacto en retries/health checks. Da un ejemplo con curl -X PUT vs POST.**
+Idempotencia es ejecutar el mismo request varias veces y no cambiar el resultado. Tenemos como ejemplo de métodos idempotentes a GET, PUT, DELETE y no idempotente a POST. Cuando un cliente, un load balancer o un health checker repite la petición, los métodos idempotentes no causan efectos secundarios no deseados.
+
+- **DNS: ¿por qué hosts es útil para laboratorio pero no para producción? ¿Cómo influye el TTL en latencia y uso de caché?**
+El archivo hosts es útil en laboratorio porque permite mapear un dominio a una IP local de forma manual y rápida, pero en producción se requiere DNS para que los clientes puedan resolver el dominio. El TTL en DNS influye en la latencia y el uso de caché: a mayor TTL, mejor latencia y menos consultas gracias al caché.
+
+- **TLS: ¿qué rol cumple SNI en el handshake y cómo lo demostraste con openssl s_client?**
+El SNI permite que un servidor presente diferentes certificados TLS según el nombre del host solicitado por el cliente. Se demostró con openssl s_client usando la opción `-servername  miapp.local`.
+
+- **12-Factor: ¿por qué logs a stdout y config por entorno simplifican contenedores y CI/CD?**
+Los logs a stdout/stderr permiten que el entorno de ejecución se encargue de recolectarlos e integrarlos con sistemas externos, evitando gestión manual en la app. La configuración en variables de entorno simplifica CI/CD porque desacopla el código de la config, permitiendo usar la misma imagen de contenedor en distintos entornos sin reempaquetar.
+
+- **Operación: ¿qué muestra ss -ltnp que no ves con curl? ¿Cómo triangulas problemas con journalctl/logs de Nginx?**
+`ss -ltnp`  muestra procesos y sockets en escucha, mientras que `curl` prueba la respuesta HTTP del servicio. con `ss` verifico los puertos de mi app, con `curl` verfico la conexión HTTP. Si hay problemas, uso `journalctl -u nginx` para ver logs de Nginx en busca de errores.
