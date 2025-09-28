@@ -1,0 +1,12 @@
+alias.s=status
+alias.cm=commit -m
+alias.lag=log --all --graph
+alias.lago=log --all --graph --oneline
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://<token>@github.com/fausto-e/CC3S2.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+user.name=fausto-e
+user.email=fausto4412711@gmail.com

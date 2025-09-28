@@ -1,0 +1,4 @@
+  feature/msg    26551f5 Add coverage.txt
+  feature/rebase 30f4543 Add feature/rebase to app.py
+  hotfix         c43c3e0 Fix app.py
+* main           4539882 Entrega Actividad 5

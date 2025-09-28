@@ -1,0 +1,19 @@
+* 4539882 Entrega Actividad 5
+* a721580 Entrega Actividad 2
+* 63e5ee9 Anhadir Actividad2-4
+* 236ea5d Add Actividad2-3
+* 90bfe3e Add README.md con lo especificado en la prueba
+* e8f961f Add seccion3_redes_api
+* ba40e68 Add git_log.txt
+| * 30f4543 Add feature/rebase to app.py
+|/  
+* b092ea2 Add test_app.py
+* f60c690 Cherry pick Fix app.py
+* 3c7e33a Add app.py
+| * c43c3e0 Fix app.py
+|/  
+* 26551f5 Add coverage.txt
+* 43176b9 Debug syscheck.sh
+* 7c26176 Add Makefile
+* 08f2cba Add syscheck.sh
+* 3794780 Estructura de actividad 1

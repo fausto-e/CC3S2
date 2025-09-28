@@ -1,0 +1,60 @@
+# git-merge.txt
+
+## Merge de feature/advanced-feature en master
+
+Se creó la rama `feature/advanced-feature` desde `master` y se añadió la función greet():
+
+def greet():
+    print('Hello como una función avanzada')
+
+greet()
+
+Commit en la rama feature/advanced-feature:
+
+En la rama `master`, se realizaron cambios en el mismo archivo `main.py`, modificando el print original a:
+
+print('Hello World-actualiado en main')
+
+
+### Conflicto generado
+Al ejecutar:
+
+$ git merge feature/advanced-feature
+
+Git mostró un conflicto en `main.py`:
+
+<<<<<<< HEAD
+print('Hello World-actualiado en main')
+=======
+def greet():
+    print('Hello como una función avanzada')
+
+greet()
+>>>>>>> feature/advanced-feature
+
+---
+
+### Resolución
+Se decidió **combinar ambos cambios** para mantener la funcionalidad de `greet()` y el mensaje actualizado:
+
+print('Hello World-actualiado en main')
+
+def greet():
+    print('Hello como una función avanzada')
+
+greet()
+
+Archivo corregido → guardado y añadido:
+
+$ git add main.py
+$ git commit -m "Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature"
+
+---
+
+### Historial después del merge
+*   50e6929 (HEAD -> master) Merge branch 'feature/advanced-feature'
+|\  
+| * e43755b (feature/advanced-feature) Agrega la funcion greet como función avanzada
+* | 33e396a Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature
+|/  
+*   1dc01b4 Fusion de la rama develop.
