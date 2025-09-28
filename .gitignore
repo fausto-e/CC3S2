@@ -1,0 +1,6 @@
+venv/
+*cache*/
+*tmp*
+*TODO*
+out/
+dist/

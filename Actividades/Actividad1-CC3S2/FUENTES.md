@@ -1,1 +1,2 @@
-TODO: 2 fuentes de calidad
+- Ruf, Philipp & Madan, Manav & Reich, Christoph & Ould Abdeslam, Djaffar. (2021). Demystifying MLOps and Presenting a Recipe for the Selection of Open-Source Tools. Applied Sciences. 11. 39. 10.3390/app11198861. 
+ 
