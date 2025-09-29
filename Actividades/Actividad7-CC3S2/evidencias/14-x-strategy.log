@@ -1,0 +1,17 @@
+*   36f72a7 (HEAD -> main) Merge branch 'edits'
+|\  
+| * 691a618 (edits) Agrega linea en README.md desde rama edits
+* | 55c82aa Renombra README.md a DOCUMENTACION.md
+|/  
+* c1f4014 Commit inicial para rename con README.md
+*   af79900 Merge branch 'feature-x'
+|\  
+| * 6da5b4e (feature-x) Añadir cambio feature-x-theirs
+* | 241cf3a Añadir cambio main2
+|/  
+*   159fc7f Merge branch 'feature-x'
+|\  
+| * 161a514 Añadir cambio feature-x-ours
+* | f5b40d6 Añadir cambio main1
+|/  
+* 5b4340b Añadir commit inicial para merge-X

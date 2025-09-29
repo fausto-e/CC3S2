@@ -1,0 +1,34 @@
+*   a58ee7c (HEAD -> main) Add 'vendor/demo/' from commit 'c058541f5471b801b45913a41abfc3d54dc73eba'
+|\  
+| * c058541 Añadir cambios introducidos por stash pop
+| * 2efd62e Añadir cambio intermedio para stash pop
+| * 68749e8 Agregar cambios desde cherry-pick
+| * b92e37e Agrega ejemplo de cherry-pick
+| *   4c3cfc4 Merge pull request #1 from fausto-e/feature/team-feature
+| |\  
+| | * 79ec903 Update colaboracion.py
+| | * 1a5d846 Agrega script de colaboración
+| |/  
+| *   3211a08 Añadir merge de rollback-feature
+| |\  
+| | * 1926aba Corregir error en la funcionalidad de rollback
+| * | f6665d8 Revert "Agregar dummy change"
+| |/  
+| * 06f0207 Agregar dummy change
+| *   50e6929 Merge branch 'feature/advanced-feature'
+| |\  
+| | * e43755b Agrega la funcion greet como función avanzada
+| * | 33e396a Resuelve el conflicto de fusión entre la versión main y feature/advanced-feature
+| |/  
+| *   1dc01b4 Fusion de la rama develop.
+| |\  
+| | * b1b9133 Agregar cambio a README.md  desde devolop
+| |/  
+| * 8cb5fa5 Agrega main.py
+| * 8152947 Configura la documentación del repositorio
+| * 3cf3e97 Commit inicial con README.md
+| * ee8379c (dummy-branch) Añadir cambio dummy3
+| * 031ecd4 Añadir cambio dummy2
+|/  
+* 136f48d Añadir cambio dummy1
+* 61c240b Añadir commit inicial para subtree

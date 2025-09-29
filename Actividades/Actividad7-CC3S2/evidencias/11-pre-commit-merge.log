@@ -1,0 +1,7 @@
+*   9cd68b0 (HEAD -> main) Merge branch 'feature-validate'
+|\  
+| * a3d622a (feature-validate) Añadir cambio validate_3
+| * ac0d630 Añadir cambio validate_2
+| * 0c1955d Añadir cambio validate_1
+|/  
+* e98f66a Añadir commit inicial para merge-validacion
