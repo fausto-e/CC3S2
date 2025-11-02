@@ -5,7 +5,7 @@
                 {
                     "type": "string",
                     "default": "cambio-name",
-                    "description": "Nombre del servidor local"
+                    "description": "Cambio en la descripción del nombre"
                 }
             ]
         },
