@@ -1,0 +1,22 @@
+{
+    "variable": [
+        {
+            "name": [
+                {
+                    "default": "app4",
+                    "description": "Nombre del servidor local",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "network": [
+                {
+                    "default": "net4",
+                    "description": "Nombre de la red local",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

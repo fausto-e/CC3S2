@@ -1,0 +1,22 @@
+{
+    "variable": [
+        {
+            "name": [
+                {
+                    "default": "app6",
+                    "description": "Nombre del servidor local",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "network": [
+                {
+                    "default": "net6",
+                    "description": "Nombre de la red local",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

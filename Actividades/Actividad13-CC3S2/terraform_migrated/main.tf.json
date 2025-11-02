@@ -1,0 +1,26 @@
+{
+    "resource": [
+        {
+            "null_resource": [
+                {
+                    "legacy_migration": [
+                        {
+                            "triggers": {
+                                "port": "${var.port}",
+                                "app_name": "${var.app_name}",
+                                "environment": "${var.environment}"
+                            },
+                            "provisioner": [
+                                {
+                                    "local-exec": {
+                                        "command": "echo 'Arrancando ${var.app_name}' && echo 'Puerto: ${var.port}' && echo 'Entorno: ${var.environment}'"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

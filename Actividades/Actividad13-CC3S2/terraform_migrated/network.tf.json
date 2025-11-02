@@ -1,0 +1,31 @@
+{
+    "variable": [
+        {
+            "port": [
+                {
+                    "type": "string",
+                    "default": "8080",
+                    "description": "Migrado desde config.cfg: PORT"
+                }
+            ]
+        },
+        {
+            "app_name": [
+                {
+                    "type": "string",
+                    "default": "app_migration",
+                    "description": "Migrado desde config.cfg: APP_NAME"
+                }
+            ]
+        },
+        {
+            "environment": [
+                {
+                    "type": "string",
+                    "default": "env_var",
+                    "description": "Migrado desde config.cfg: ENVIRONMENT"
+                }
+            ]
+        }
+    ]
+}
