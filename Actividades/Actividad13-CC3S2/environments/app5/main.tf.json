@@ -3,18 +3,20 @@
         {
             "null_resource": [
                 {
-                    "app5": [
+                    "local_server-app5": [
                         {
                             "provisioner": [
                                 {
                                     "local-exec": {
-                                        "command": "echo 'Arrancando servidor ${var.name} en red ${var.network}'"
+                                        "command": "echo 'Arrancando servidor ${var.name} en red ${var.network}:${var.port} (autenticado)'"
                                     }
                                 }
                             ],
                             "triggers": {
+                                "api_key_hash": "${md5(var.api_key)}",
                                 "name": "${var.name}",
-                                "network": "${var.network}"
+                                "network": "${var.network}",
+                                "port": "${var.port}"
                             }
                         }
                     ]

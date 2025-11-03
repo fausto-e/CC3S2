@@ -1,0 +1,70 @@
+
+{
+    "resource": [
+        {
+            "null_resource": [
+                {
+                    "backend_server_1": [
+                        {
+                            "triggers": {
+                                "name": "backend-server-1",
+                                "network": "backend-net",
+                                "port": "9999"
+                            },
+                            "provisioner": [
+                                {
+                                    "local-exec": {
+                                        "command": "echo 'Backend Server 1 iniciado en backend-net:8081'"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "backend_server_2": [
+                        {
+                            "triggers": {
+                                "name": "backend-server-2",
+                                "network": "backend-net",
+                                "port": "8082"
+                            },
+                            "provisioner": [
+                                {
+                                    "local-exec": {
+                                        "command": "echo 'Backend Server 2 iniciado en backend-net:8082'"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "load_balancer": [
+                        {
+                            "depends_on": [
+                                "null_resource.backend_server_1",
+                                "null_resource.backend_server_2"
+                            ],
+                            "triggers": {
+                                "lb_name": "main-lb",
+                                "backends": "backend-server-1,backend-server-2",
+                                "lb_port": "80",
+                                "health_check": "/health",
+                                "backend1_trigger": "${null_resource.backend_server_1.id}",
+                                "backend2_trigger": "${null_resource.backend_server_2.id}"
+                            },
+                            "provisioner": [
+                                {
+                                    "local-exec": {
+                                        "command": "echo 'Load Balancer: main-lb' && echo 'Puerto: 80' && echo 'Backends: backend-server-1, backend-server-2' && echo 'Health Check: /health'"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

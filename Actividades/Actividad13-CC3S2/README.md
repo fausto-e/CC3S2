@@ -16,6 +16,3 @@ Terraform sí recrea el recurso completo (-/+ replace), NO hace cambio in-place.
 Pregunta 4: ¿Qué pasa si editas directamente main.tf.json en lugar de la plantilla de variables?
 
 Terraform detectará el cambio y recreará el recurso (-/+) correctamente para ese entorno. Sin embargo, los otros entornos no se verán afectados y mantendrán la configuración anterior, lo que puede llevar a inconsistencias si se espera que todos los entornos tengan la misma configuración.
-
-
-#### Respuestas fase 3

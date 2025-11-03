@@ -17,6 +17,24 @@
                     "type": "string"
                 }
             ]
+        },
+        {
+            "port": [
+                {
+                    "default": 8798,
+                    "description": "Puerto de la app",
+                    "type": "number"
+                }
+            ]
+        },
+        {
+            "api_key": [
+                {
+                    "description": "API Key secreta (pasar via TF_VAR_api_key)",
+                    "sensitive": true,
+                    "type": "string"
+                }
+            ]
         }
     ]
 }

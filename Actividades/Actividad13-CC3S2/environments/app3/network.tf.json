@@ -12,8 +12,26 @@
         {
             "network": [
                 {
-                    "default": "net3",
+                    "default": "net2-peered",
                     "description": "Nombre de la red local",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "port": [
+                {
+                    "default": 8793,
+                    "description": "Puerto de la app",
+                    "type": "number"
+                }
+            ]
+        },
+        {
+            "api_key": [
+                {
+                    "description": "API Key secreta (pasar via TF_VAR_api_key)",
+                    "sensitive": true,
                     "type": "string"
                 }
             ]
