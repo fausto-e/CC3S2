@@ -1,0 +1,61 @@
+{
+    "resource": [
+        {
+            "null_resource": [
+                {
+                    "network_init": [
+                        {
+                            "triggers": {
+                                "description": "Inicializaci\u00f3n de red",
+                                "factory_uuid": "869a2930-8257-4166-a1b7-798744cd3f25",
+                                "timestamp": "2025-11-03T23:31:05.141060"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "null_resource": [
+                {
+                    "app_init": [
+                        {
+                            "triggers": {
+                                "description": "Inicializaci\u00f3n de aplicaci\u00f3n",
+                                "factory_uuid": "71337c2e-889e-4ace-beda-f1989a65581a",
+                                "timestamp": "2025-11-03T23:31:05.141078"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "local_file": [
+                {
+                    "network_readme": [
+                        {
+                            "content": "Documentaci\u00f3n del m\u00f3dulo de red\n\nVPC CIDR: 10.0.0.0/16",
+                            "filename": "${path.module}/network_readme.txt"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "module": {
+        "network": {
+            "source": "./modules/network",
+            "vpc_cidr": "10.0.0.0/16",
+            "environment": "dev"
+        },
+        "app": {
+            "source": "./modules/app",
+            "instance_count": 2,
+            "app_name": "mi-aplicacion",
+            "depends_on": [
+                "module.network"
+            ]
+        }
+    }
+}

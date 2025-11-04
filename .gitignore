@@ -7,3 +7,4 @@ dist/
 .terraform*
 .venv*
 *backup*
+*.tfstate

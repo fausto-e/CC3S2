@@ -1,0 +1,148 @@
+{
+    "module": {
+        "ej25": {
+            "resource": [
+                {
+                    "null_resource": [
+                        {
+                            "ej25_0": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "null_resource": [
+                        {
+                            "ej25_1": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "null_resource": [
+                        {
+                            "ej25_2": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "null_resource": [
+                        {
+                            "ej25_3": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "null_resource": [
+                        {
+                            "ej25_4": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "null_resource": [
+                        {
+                            "ej25_5": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "null_resource": [
+                        {
+                            "ej25_6": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "null_resource": [
+                        {
+                            "ej25_7": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "null_resource": [
+                        {
+                            "ej25_8": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "null_resource": [
+                        {
+                            "ej25_9": [
+                                {
+                                    "triggers": {
+                                        "factory_uuid": "8955e3d1-9b79-41b4-aa37-2849ca09ce90",
+                                        "timestamp": "2025-11-04T00:10:01.800583"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

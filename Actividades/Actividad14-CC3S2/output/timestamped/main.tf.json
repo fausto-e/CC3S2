@@ -1,0 +1,19 @@
+{
+    "resource": [
+        {
+            "null_resource": [
+                {
+                    "test_ts": [
+                        {
+                            "triggers": {
+                                "time_stamp": "20251103",
+                                "factory_uuid": "8c3b8136-5dde-4972-b866-dcaa8cf10b6f",
+                                "timestamp": "2025-11-03T23:18:36.768733"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
