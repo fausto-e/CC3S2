@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app19-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ac19-app
+  template:
+    metadata:
+      labels:
+        app: ac19-app
+    spec:
+      containers:
+        - name: app-ms
+          image: ejemplo-ms:0.1.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /api/items
+              port: 80
+            periodSeconds: 10
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /api/items
+              port: 80
+            periodSeconds: 10
+            failureThreshold: 3
